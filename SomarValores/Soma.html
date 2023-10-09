@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOMA DE VALORES</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        justify-content: center;
+        font: normal 15pt bold;
+      }
+
+      h1 {
+        padding: 1rem;
+      }
+
+      div {
+        padding: 20px;
+        border: none;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      #res {
+        font: solid 3px bold;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  -->
+
+    <div>
+        <h1>Somando Valores</h1>
+        <div>
+            <input type="number" name="" id="n1" />
+            <input type="number" name="" id="n2" />
+        </div>
+      <div id="btn">
+            <input type="button" value="Somar" onclick="Soma()" />
+      </div>
+        <div id="res">Resultado</div>
+    </div>
+
+    <!-- criando evento de soma de valores -->
+    <script>
+      function Soma() {
+        let S = window.document.getElementById("n1");
+        let S1 = window.document.getElementById("n2");
+        let res = window.document.getElementById("res");
+
+        let n1 = Number(S.value);
+        let n2 = Number(S1.value);
+
+        let Somando = n1 + n2;
+
+        res.innerHTML = `A soma Entre ${n1} e ${n2} e igual A ${Somando}`;
+      }
+    </script>
+  </body>
+</html>
